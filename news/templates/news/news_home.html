@@ -2,8 +2,17 @@
 {% block title %}Новости на сайте{% endblock %}
 {% block content %}
     <div class="features">
-        <h1>Новости на сайте</h1>
-        <p>На нашем сайте представлена простая информация.</p>
-        <div class="btn btn-warning">На страницу про нас</div>
+        <h1 class="title">Новости на сайте</h1>
+        {% if news %}
+            {% for el in news %}
+                <div class="alert alert-warning">
+                    <h3>{{ el.title }}</h3>
+                    <p>{{ el.anons }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Новостей нет</p>
+        {% endif %}
+        {# Комментарий #}
     </div>
 {% endblock %}
