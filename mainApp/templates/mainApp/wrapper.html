@@ -11,18 +11,20 @@
   <body>
     <div class="jumbotron">
       <div class="container">
-        <p>{% block content %} {% endblock %}</p>
+        <p>
+          {% block content %}{% endblock %}
+        </p>
         <p>
           <a href="/" class="btn btn-success btn-lg">Главная страница</a>
-          <a href="/news" class="btn btn-primary btn-lg">
-            Узнать больше&raquo;
-          </a>
+          <a href="/news" class="btn btn-primary btn-lg">Узнать больше&raquo;</a>
         </p>
       </div>
     </div>
     <div class="contaier">
       <img src="{% static 'mainApp/image/mersedes.jpg' %}" class="img-thumbnail">
-      <hr>&copy;Все права защищены, 2022</hr>
-    </div>
-  </body>
+      <hr>
+      &copy;Все права защищены, 2022
+    </hr>
+  </div>
+</body>
 </html>
